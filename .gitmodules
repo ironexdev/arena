@@ -1,9 +1,12 @@
 [submodule "warrior"]
 	path = warrior
 	url = git@github.com:ironexdev/arena-warrior.git
+	branch = master
 [submodule "paladin"]
 	path = paladin
 	url = git@github.com:ironexdev/arena-paladin.git
+	branch = master
 [submodule "docker"]
 	path = docker
 	url = git@github.com:ironexdev/arena-docker.git
+	branch = master
