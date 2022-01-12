@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# User
+# FetchUserResponse
 export USER_ID=$(id -u)
 export GROUP_ID=$(id -u)
 
@@ -26,6 +26,6 @@ export WARRIOR_DIRECTORY=${ARENA_DIRECTORY}/${WARRIOR_CONTEXT_PATH}
 export VAR_DIRECTORY=${DOCKER_DIRECTORY}/var
 
 # Logs
-export LOG_DIRECTORY=${VAR_DIRECTORY}/logs
+export LOG_DIRECTORY=${VAR_DIRECTORY}/log
 export PALADIN_LOG_DIRECTORY=${LOG_DIRECTORY}/paladin
 export HTTP_PROXY_LOG_DIRECTORY=${LOG_DIRECTORY}/http-proxy

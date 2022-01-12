@@ -21,3 +21,35 @@ delay(500)
       console.log(2)
     })
 ```
+
+## JS async
+
+    const fetchAuthenticatedUser = async () => {
+      const authenticatedUserResponse = await authenticationService.authenticatedUser()
+    
+      if (store.getters["AuthenticationModule/securelyAuthenticated"]) {
+        console.log("User is securely authenticated")
+      } else if (store.getters["AuthenticationModule/authenticated"]) {
+        console.log("User is authenticated")
+      } else {
+        console.log("User is not authenticated")
+      }
+    
+      console.log(authenticatedUserResponse)
+    }
+    
+VS
+
+    fetchAuthenticatedUser()
+    
+    authenticationService.authenticatedUser().then((authenticatedUserResponse) => {
+      if (store.getters["AuthenticationModule/securelyAuthenticated"]) {
+        console.log("User is securely authenticated")
+      } else if (store.getters["AuthenticationModule/authenticated"]) {
+        console.log("User is authenticated")
+      } else {
+        console.log("User is not authenticated")
+      }
+    
+      console.log(authenticatedUserResponse)
+    })
